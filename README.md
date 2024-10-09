@@ -1,2 +1,2 @@
-# pythin
-Python
+import telebot
+from telebot
