@@ -1,9 +1,9 @@
 import telebot
 from telebot import types
 
-token = "7229675132:AAHDvs6KnAvNEQf10lEw9e9-O64L9k7objg"
+token="حط هنا توكنك"
 bot = telebot.TeleBot(token)
-owner_id = 5583353259 
+owner_id = #حط هينا ايدي مالج بوت يعني ايديك 
 admins = [owner_id]   
 
 def admin_panel(message):
