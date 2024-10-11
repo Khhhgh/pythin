@@ -103,4 +103,4 @@ def xx(call):
                 break
 
             os.system("clear")
-bot.infinty_polling()
+bot.infinity_polling()
