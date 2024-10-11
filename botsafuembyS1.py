@@ -1,5 +1,12 @@
 from telebot import types
-
+import os
+import requests
+from os import system
+from ssl import CERT_NONE
+from gzip import decompress
+from random import choice, choices
+from concurrent.futures import ThreadPoolExecutor
+from json import dumps
 
 token=input("Enter your token")
 bot = telebot.TeleBot(token)
@@ -22,5 +29,5 @@ def xx(call):
         bot.edit_message_text(chat_id=call.message.chat.id,
                               message_id=call.message.id,
                               text="""
-                            انتضر ائخي"""
+                            (انتضر ائخي"""
         
