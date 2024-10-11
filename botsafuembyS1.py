@@ -102,5 +102,5 @@ def xx(call):
                 bot.send_message(call.message.chat.id, "تم سويت 2900 حساب يلا ولي")
                 break
 
-            os.system("clear")
+            
 bot.infinity_polling()
