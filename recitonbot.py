@@ -8,7 +8,10 @@ try:
 except ImportError:
     os.system("pip install telebot")
     os.system("pip install requests")
-
+from telebot import types
+import json
+import requests
+import random 
 token = ""  # ضع التوكن الخاص بك هنا
 bot = telebot.TeleBot(token)
 
