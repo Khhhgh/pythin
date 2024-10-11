@@ -29,5 +29,7 @@ def xx(call):
         bot.edit_message_text(chat_id=call.message.chat.id,
                               message_id=call.message.id,
                               text="""
-                            (انتضر ائخي"""
+                          
+                            
+                           (   انتضر ائخي"""
         
