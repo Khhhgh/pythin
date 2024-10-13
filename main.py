@@ -9,7 +9,6 @@ import json
 import requests
 import pyrogram
 import telethon
-from telethon import telegramClient
 import datetime
 import time
 import hijri_converter
