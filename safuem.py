@@ -36,8 +36,8 @@ def xx(call):
     ksksksk
     لازم يكون باسورد hhhh
     """)
-        u = call.message.text
-        users = u.split("\n")
+        users= call.message.text
+        
 
         blist = [
             {"action": "Profile", "subaction": "GetStatus", "id": "2078941366"},
