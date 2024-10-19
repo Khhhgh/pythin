@@ -96,12 +96,8 @@ def s1():
     except json.JSONDecodeError:
         print(Fore.RED + "Error decoding the response as JSON")
 
-    # طباعة القيم بعد كل عملية
-    print(f"""
-    {Fore.GREEN}GOOD INSTA AND BAD GMAIL ~ {bag}
-    {Fore.BLUE}GOOD ~ {gg}
-    {Fore.RED}BAD ~ {bb}
-    """)
+    # تحديث القيم في السطر الحالي فقط
+    print(f"\r{Fore.GREEN}GOOD INSTA AND BAD GMAIL ~ {bag} {Fore.BLUE}GOOD ~ {gg} {Fore.RED}BAD ~ {bb}", end="")
     
     time.sleep(random.uniform(1, 3))
 
