@@ -96,35 +96,34 @@ def s1():
     except json.JSONDecodeError:
         print(Fore.RED + "Error decoding the response as JSON")
 
-    
+    # طباعة القيم بعد كل عملية
     print(f"""
     {Fore.GREEN}GOOD INSTA AND BAD GMAIL ~ {bag}
     {Fore.BLUE}GOOD ~ {gg}
     {Fore.RED}BAD ~ {bb}
     """)
-    os.system("clear")
-
+    
     time.sleep(random.uniform(1, 3))
 
 def run_threads():
     threads = []
-    for i in range(10):  
+    for i in range(10):  # تحديد عدد معقول من الخيوط
         t = threading.Thread(target=s1)
         threads.append(t)
         t.start()
     for t in threads:
         t.join()
 
-
+# تشغيل البوت في خيط منفصل
 def start_bot():
     bot.polling(non_stop=True)
 
 if __name__ == "__main__":
-    
+    # تشغيل البوت في خيط
     bot_thread = threading.Thread(target=start_bot)
     bot_thread.start()
-
     
+    # الاستمرار في تشغيل الأكواد الأخرى
     while True:
         run_threads()
-        time.sleep(1)  
+        time.sleep(1)  # إضافة تأخير لتحديث الشاشة بشكل متدرج
