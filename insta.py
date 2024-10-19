@@ -31,11 +31,11 @@ def s1():
     console = Console()
 
     
-    for _ in track(range(200), description="Checking Instagram users..."):
+    for _ in track(range(200000), description="Checking Instagram users..."):
         uh = "".join(random.choice("1234567890") for _ in range(1))
         ns = "".join(random.choice("qwertyuiopasdfghjklzxcvbnm._") for _ in range(1))
         j = "".join(random.choice("1234567890qwertyuiopasdfghjklzxcvbnm._") for _ in range(1))
-        user = f"__{j}{ns}{uh}"
+        user = f"{j}_{ns}_{uh}"
 
         check = Instagram.CheckUsers(f"{user}")
         if check == True:
