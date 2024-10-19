@@ -1,6 +1,11 @@
 import requests
+import telebot
 def Tele(ccx):
     import requests
+    ccx=input("Enter your  Name file Combo : " )
+    to=input("Enter your token : ")
+    bot=telebot.TeleBot(to)
+    sz=input("Enter your id : ")
     ccx=ccx.strip()
     n = ccx.split("|")[0]
     mm = ccx.split("|")[1]
