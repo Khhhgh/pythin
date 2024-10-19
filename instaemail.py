@@ -10,24 +10,21 @@ from colorama import Fore, init
 
 init(autoreset=True)
 
-# إعداد البوت
-tok = "7442113281:AAF7i4zBUBvm7_yHwBHZm9QmPZ3T6U8t_6I"
+tok = "حط توكنك هينا "
 bot = telebot.TeleBot(tok)
-user_id = "5583353259"  # معرف المالك
-
-# إعداد الطباعة
+user_id = "ايذيك"
 ascii_banner = pyfiglet.figlet_format("S1")
 print(Fore.CYAN + ascii_banner)
 
-# الإحصائيات
+
 gg = 0
 bb = 0
 gi = 0
 bag = 0
 
-# الدالة الأساسية لمحاولات تسجيل الدخول
+
 def s1():
-    global gg, bb, gi, bag
+    global gg, bb, gi, bag,user_id,bot,tok
     email = "".join(random.choice("qwertyuiopasdfghjklzxcvbnm1234567890") for i in range(9)) + "@gmail.com"
     cookies = {
         'csrftoken': 'tsmei0Vp9gnrZuSLEMBBRE',
@@ -100,26 +97,23 @@ def s1():
     except json.JSONDecodeError:
         print(Fore.RED + "Error decoding the response as JSON")
 
-    # طباعة الإحصائيات بدون مسح الشاشة
+    
     print(f"""
     {Fore.GREEN}GOOD INSTA AND BAD GMAIL ~ {bag}
     {Fore.BLUE}GOOD ~ {gg}
     {Fore.RED}BAD ~ {bb}
     """)
 
-    time.sleep(random.uniform(1, 3))
-
-# تشغيل المحاولات في عدة خيوط
+    time.sleep(random.uniform(1, 3)
 def run_threads():
     threads = []
-    for _ in range(10):  # عدد الخيوط
+    for _ in range(10): 
         t = threading.Thread(target=s1)
         threads.append(t)
         t.start()
     for t in threads:
         t.join()
 
-# بدء تشغيل البوت
 def start_bot():
     bot.polling(non_stop=True)
 
@@ -127,7 +121,7 @@ if __name__ == "__main__":
     bot_thread = threading.Thread(target=start_bot)
     bot_thread.start()
 
-    # تشغيل المحاولات بشكل مستمر
+    
     while True:
         run_threads()
-        time.sleep(1)  # تأخير بسيط بين الدورات لتقليل الحمل
+        time.sleep(1)
