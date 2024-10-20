@@ -7,7 +7,11 @@ import gzip
 import websocket
 import time
 
-token = "7905440439:AAGx6F7iEYMJeKkuGqeKoHbQ000MF2zKTmc"
+token = input("Enter yout token : ")
+print("""
+
+روح للبوت ودز /start
+""")
 bot = telebot.TeleBot(token)
 
 users = "" 
