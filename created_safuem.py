@@ -18,8 +18,8 @@ success = 0
 retry = 0
 accounts = []
 
-token = '6478307888:AAG9wBf1_2xXDVxg_LqXTloMgDcgzrIW5js'
-ID = '6119391480'
+token = ''
+ID = ''
 
 
 def work():
