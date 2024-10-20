@@ -36,7 +36,12 @@ def xx(call):
     ksksksk
     لازم يكون باسورد hhhh
     """)
-        users= call.message.text
+        u= call.message.text
+        for i in u:
+            n=i.split("\n")
+            users=n.split("")[0]
+            
+            
         
 
         blist = [
