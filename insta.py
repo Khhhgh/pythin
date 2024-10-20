@@ -7,10 +7,6 @@ try:
     from Topython import Instagram
 except ImportError:
     os.system("pip install Topython")
-try:
-    import socks
-except:
-    os.system("pip install socks")
 from Topython import Instagram
 import random
 from rich import print
