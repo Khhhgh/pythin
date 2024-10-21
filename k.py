@@ -11,11 +11,11 @@ from email import encoders
 import os
 
 
-Token =input("Enter your token : ") # حط توكنك هنا
+Token ="7754621376:AAG8VOrvrWijFC3YuVu-s5RiwRAJ9uazLyw"
 bot = telebot.TeleBot(Token, parse_mode="Markdown")
 
 # تأكد من تعيين Owner بشكل صحيح
-Owner = input("Enrer your id : ")  # يجب أن يكون هذا رقم المستخدم الخاص بك
+Owner = 7164577863
 BayaTi = set()
 
 user_data = {}
