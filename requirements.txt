@@ -1,3 +1,2 @@
-flask
-requests
-user_agent
+pyrogram==2.0.0
+pytz==2021.1
