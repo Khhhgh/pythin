@@ -19,7 +19,7 @@ user_message_count = defaultdict(int)
 user_message_count=0
 
 
-token = "7488755736:AAHoKPQISWUAZVZVJSMB8kPcdhBj53nn8Is"
+token = "7688125082:AAG_htr5oru-4xCkjYFG0hVzjHQJ2-8QWHo"
 bot = telebot.TeleBot(token)
 number_of_ok=0
 ok=types.InlineKeyboardButton(text=f"❤️{number_of_ok}",callback_data="ok")
